@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: rgb(216, 250, 215);
+    font-weight: bold;
+  }
+
+  ul{
+    width: 90%;
+    margin: 0;
+    padding: 0;
+  }
+.main{
+    margin-top: 30px;
+    display: flex;              /* I am used to bring align content into Center So Used three peoperties */
+    justify-content: center;
+    align-content: center;
+  }
+
+ul li {
+    cursor: pointer;
+    position: relative;  /* i need to adjust content away from normal position */
+    padding: 12px;
+    list-style-type: none;  /* dot symbol not need so i useded This properties */
+    width: 100%;
+    background: #ffffff;
+    color: #000000;
+    font-size: 18px;
+    transition: 0.2s;
+    border-radius: 50px 50px 50px 50px;
+   
+    
+    /* make the list items unselectable */
+    
+  }
+  
+  /* I need to show list different color for easy to identify and bring look perfect */
+  ul li:nth-child(odd) {   /*used to match child elements*/
+    background: #e7fce8;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #e7ffea;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #009b00;
+    color: #ffffff;
+    text-decoration: line-through;
+  }
+  
+  /* it will add when we click list filed*/
+  ul li.checked::before {
+
+    content: '';
+    position: absolute;  /* I used this properties for overlap   */
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+    /* border-radius: 5px 50px 50px 5px; */
+  }
+  
+  /* Style for close button */
+  .close {
+    background-color: #ffffff;
+    color: #000000;
+    position: absolute;
+    right: 0;             
+    top: 0;                          
+    border-radius: 50%;
+    padding: 12px 16px 12px 16px;  
+  }
+  
+  .close:hover {
+    background-color: #ff2d1e;
+
+  }
+  
+  /* Style for header */
+  .mainBody {
+    width: 40%;
+    background-color: #00630d;
+    border-radius: 10px;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  /* Style for input  */  
+  input {
+    border: none;                    /* I dont need to add border in input filed so, I removed it */
+    /* outline: none; */
+    outline-color: #007e00;        /* I added green color inner outline */
+    border-radius: 5px;               
+    width: 65%;
+    padding: 10px;
+    float: left;                     /*  */
+    font-size: 16px;
+  }
+  
+  /* Style for "Add" button */
+  .button {
+    padding-left: 40px;
+    padding: 10px;
+    border: none;
+    width: 25%;
+    background: #fffb01;
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    justify-content: space-evenly;
+  }
+  
+  .button:hover {
+    background-color: #f5ff66;
+  }
+
+  .ilist{
+    pointer-events:none;
+  }
